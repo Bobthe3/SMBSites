@@ -9,7 +9,6 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/` | Agency Home | Claude Supply agency homepage |
 | `/keekuzcom` | Keekuz | Restaurant client site |
 | `/dinos` | Dinos | Restaurant client site |
-| `/sweetgarden` | Sweet Garden | Bakery client site |
 | `/pingsbistro` | Ping's Bistro | Hunan Chinese restaurant (bilingual EN/中文) |
 | `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
 | `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
@@ -21,7 +20,6 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 claudesupply.com/                → Agency website
 claudesupply.com/keekuzcom/      → Keekuz restaurant
 claudesupply.com/dinos/          → Dinos restaurant
-claudesupply.com/sweetgarden/    → Sweet Garden bakery
 claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
 claudesupply.com/verdant/        → Verdant (healthy bowls)
 claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
@@ -38,19 +36,16 @@ sites/keekuzcom/
 │   ├── globals.css
 │   ├── keekuzcom/              # Keekuz client site
 │   ├── dinos/                  # Dinos client site
-│   ├── sweetgarden/            # Sweet Garden client site
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
 │   ├── verdant/                # Verdant (standalone)
 │   ├── ysg/                    # YSG Halal (standalone)
 │   └── siafusion/              # Sia Fusion (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
-│   ├── dinos/                  # Dinos components
-│   └── sweetgarden/            # Sweet Garden components
+│   └── dinos/                  # Dinos components
 ├── data/
 │   ├── keekuzcom/              # Keekuz data
-│   ├── dinos/                  # Dinos data
-│   └── sweetgarden/            # Sweet Garden data
+│   └── dinos/                  # Dinos data
 └── ...
 ```
 
