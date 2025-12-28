@@ -14,7 +14,7 @@ export default function Home() {
           <div className="text-xl font-bold">Claude Supply</div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-slate-400 hover:text-white transition">Services</a>
-            <a href="#process" className="text-slate-400 hover:text-white transition">Process</a>
+            <a href="/portfolio" className="text-slate-400 hover:text-white transition">Portfolio</a>
             <a href="#pricing" className="text-slate-400 hover:text-white transition">Pricing</a>
             <a href="#contact" className="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-lg transition">Contact</a>
           </div>
