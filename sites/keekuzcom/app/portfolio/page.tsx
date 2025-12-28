@@ -21,6 +21,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'siafusion',
+    name: 'Sia Fusion',
+    description: 'Korean-Japanese fusion eatery specializing in crispy wings, Seoul burgers, and late-night comfort food. Bold flavors for night owls.',
+    category: 'fusion',
+    url: '/siafusion',
+    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop',
+    tags: ['Korean-Japanese', 'Late Night', 'Fusion'],
+    features: ['Interactive menu filtering', 'Modern dark theme', 'Social links integration'],
+    color: 'from-violet-500 to-violet-700',
+    icon: Flame,
+  },
+  {
     id: 'pingsbistro',
     name: "Ping's Bistro",
     chineseName: '留湘老店',
@@ -96,12 +108,14 @@ const projects: Project[] = [
   },
 ];
 
-const categories = [
-  { id: 'all', label: 'All Projects', count: projects.length },
-  { id: 'restaurant', label: 'Restaurants', count: projects.filter(p => p.category === 'restaurant').length },
-  { id: 'bakery', label: 'Bakeries', count: projects.filter(p => p.category === 'bakery').length },
-  { id: 'fusion', label: 'Fusion', count: projects.filter(p => p.category === 'fusion').length },
+const categories: { id: Category; label: string }[] = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'restaurant', label: 'Restaurants' },
+  { id: 'bakery', label: 'Bakeries' },
+  { id: 'fusion', label: 'Fusion' },
 ];
+
+const getCategoryCount = (cat: Category) => cat === 'all' ? projects.length : projects.filter(p => p.category === cat).length;
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
@@ -157,7 +171,7 @@ export default function PortfolioPage() {
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.id as Category)}
+                onClick={() => setActiveCategory(cat.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   activeCategory === cat.id
                     ? 'bg-white text-slate-900'
@@ -168,7 +182,7 @@ export default function PortfolioPage() {
                 <span className={`ml-2 px-2 py-0.5 rounded-full text-xs ${
                   activeCategory === cat.id ? 'bg-slate-200' : 'bg-slate-700'
                 }`}>
-                  {cat.count}
+                  {getCategoryCount(cat.id)}
                 </span>
               </button>
             ))}

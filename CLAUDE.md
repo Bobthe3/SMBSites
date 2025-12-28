@@ -90,3 +90,22 @@ npm run dev                     # Run locally at localhost:3000
 - React 19
 - TypeScript
 - Tailwind CSS
+
+## TODO
+
+### Contact Forms (Lead Generation)
+Wire up contact forms across all sites to actually send emails to business owners.
+
+**Implementation:**
+1. Create `/app/api/contact/route.ts` API endpoint
+2. Set up email service (Resend - free tier: 100 emails/day)
+3. Add spam protection (honeypot field, rate limiting)
+4. Config file mapping site → owner email address
+5. Add success/error states to all contact forms
+
+**Flow:**
+```
+Contact Form → /api/contact → Resend API → Business Owner Email
+```
+
+**Affected sites:** All client sites with contact sections
