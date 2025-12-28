@@ -100,9 +100,7 @@
 ## Ongoing Improvements
 
 ### To Do:
-- [ ] Add skip-to-main-content links to all site layouts
 - [ ] Test with VoiceOver (macOS) and NVDA (Windows)
-- [ ] Add prefers-reduced-motion support for animations
 - [ ] Add prefers-color-scheme support where applicable
 
 ### Completed:
@@ -111,6 +109,11 @@
 - [x] Touch target sizing (min 44x44px)
 - [x] Responsive breakpoints
 - [x] Alt text for images
+- [x] Skip-to-main-content links on all site layouts
+- [x] Prefers-reduced-motion support for animations
+- [x] Automated accessibility testing (Playwright + axe-core)
+- [x] Automated mobile responsiveness testing
+- [x] GitHub Actions CI/CD pipeline for tests
 
 ---
 

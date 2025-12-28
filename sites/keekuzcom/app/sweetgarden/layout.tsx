@@ -16,7 +16,7 @@ export default function SweetgardenLayout({ children }: { children: React.ReactN
     <>
       <StructuredData />
       <Header />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );

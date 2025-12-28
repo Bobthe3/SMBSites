@@ -141,6 +141,7 @@ export default function PortfolioPage() {
       </nav>
 
       {/* Hero */}
+      <main id="main-content">
       <section className="relative overflow-hidden pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-emerald-600/20" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-transparent to-transparent" />
@@ -295,6 +296,7 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="py-8 border-t border-slate-800">

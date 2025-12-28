@@ -45,7 +45,7 @@ export default function KeekuzcomLayout({
     <>
       <StructuredData />
       <KeekuzHeader />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <KeekuzFooter />
     </>
   );

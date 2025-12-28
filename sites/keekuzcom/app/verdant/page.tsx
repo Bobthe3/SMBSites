@@ -29,6 +29,16 @@ export default function VerdantPage() {
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
+        /* Skip to content - accessibility */
+        .skip-to-content { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 10001; }
+        .skip-to-content:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; padding: 1rem 1.5rem; background: var(--forest); color: var(--white); font-weight: 600; text-decoration: none; outline: 2px solid var(--terracotta); }
+
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+          html { scroll-behavior: auto; }
+        }
         body { font-family: 'Outfit', sans-serif; background-color: var(--bg-warm); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3, .display { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
 
@@ -166,6 +176,9 @@ export default function VerdantPage() {
         }
       `}</style>
 
+      {/* Skip to content link - accessibility */}
+      <a href="#main-content" className="skip-to-content">Skip to main content</a>
+
       {/* Navigation */}
       <nav className={scrolled ? 'scrolled' : ''}>
         <span className="logo">Verdant</span>
@@ -179,6 +192,7 @@ export default function VerdantPage() {
       </nav>
 
       {/* Hero */}
+      <main id="main-content">
       <section className="hero">
         <div className="hero-content">
           <span className="hero-tag">Now Open in Your Neighborhood</span>
@@ -372,6 +386,7 @@ export default function VerdantPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer>

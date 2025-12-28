@@ -70,6 +70,17 @@ export default function SiaFusionPage() {
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
+        /* Skip to content - accessibility */
+        .skip-to-content { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 10001; }
+        .skip-to-content:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; padding: 1rem 1.5rem; background: var(--black); color: var(--cream); font-weight: 600; text-decoration: none; outline: 2px solid var(--vermillion); }
+
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+          html { scroll-behavior: auto; }
+          .reveal { opacity: 1; transform: none; }
+        }
         body { font-family: 'Manrope', sans-serif; background: var(--black); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         ::selection { background: var(--vermillion); color: var(--cream); }
 
@@ -277,6 +288,9 @@ export default function SiaFusionPage() {
         }
       `}</style>
 
+      {/* Skip to content link - accessibility */}
+      <a href="#main-content" className="skip-to-content">Skip to main content</a>
+
       {/* Navigation */}
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
         <a href="#" className="nav-logo">
@@ -293,6 +307,7 @@ export default function SiaFusionPage() {
       </nav>
 
       {/* Hero */}
+      <main id="main-content">
       <section className="hero">
         <div className="hero-bg" />
         <div className="pattern-bg" />
@@ -524,6 +539,7 @@ export default function SiaFusionPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="footer">

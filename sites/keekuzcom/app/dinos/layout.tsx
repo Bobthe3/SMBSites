@@ -16,7 +16,7 @@ export default function DinosLayout({ children }: { children: React.ReactNode })
     <>
       <StructuredData />
       <Header />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );

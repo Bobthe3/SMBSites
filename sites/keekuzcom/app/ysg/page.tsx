@@ -43,6 +43,16 @@ export default function YSGPage() {
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
+        /* Skip to content - accessibility */
+        .skip-to-content { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 10001; }
+        .skip-to-content:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; padding: 1rem 1.5rem; background: var(--charcoal); color: var(--cream); font-weight: 600; text-decoration: none; outline: 2px solid var(--saffron); }
+
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+          html { scroll-behavior: auto; }
+        }
         body { font-family: 'Outfit', sans-serif; background: var(--charcoal); color: var(--cream); line-height: 1.6; overflow-x: hidden; }
 
         .truck-art-border { height: 12px; background: linear-gradient(135deg, var(--saffron) 25%, transparent 25%) -10px 0, linear-gradient(225deg, var(--saffron) 25%, transparent 25%) -10px 0, linear-gradient(315deg, var(--burgundy) 25%, transparent 25%), linear-gradient(45deg, var(--burgundy) 25%, transparent 25%); background-size: 20px 12px; background-color: var(--charcoal); }
@@ -210,6 +220,9 @@ export default function YSGPage() {
         }
       `}</style>
 
+      {/* Skip to content link - accessibility */}
+      <a href="#main-content" className="skip-to-content">Skip to main content</a>
+
       {/* Border */}
       <div className="truck-art-border" />
 
@@ -229,6 +242,7 @@ export default function YSGPage() {
       </nav>
 
       {/* Hero */}
+      <main id="main-content">
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-content">
@@ -479,6 +493,7 @@ export default function YSGPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="footer">
