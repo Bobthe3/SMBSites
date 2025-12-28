@@ -1,28 +1,17 @@
 {
-  "name": "keekuz-restaurant",
-  "version": "0.1.0",
+  "name": "site-deployment",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "sites/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "lucide-react": "^0.300.0",
-    "next": "^16.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.1",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.0"
+    "dev:keekuzcom": "npm run dev --workspace=sites/keekuzcom",
+    "build:keekuzcom": "npm run build --workspace=sites/keekuzcom",
+    "start:keekuzcom": "npm run start --workspace=sites/keekuzcom",
+    "dev:template": "npm run dev --workspace=sites/template",
+    "build:template": "npm run build --workspace=sites/template",
+    "start:template": "npm run start --workspace=sites/template",
+    "build:all": "npm run build --workspaces"
   }
 }
