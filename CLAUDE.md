@@ -13,6 +13,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/pingsbistro` | Ping's Bistro | Hunan Chinese restaurant (bilingual EN/中文) |
 | `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
 | `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
+| `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
 
 ## Structure
 
@@ -24,6 +25,7 @@ claudesupply.com/sweetgarden/    → Sweet Garden bakery
 claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
 claudesupply.com/verdant/        → Verdant (healthy bowls)
 claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
+claudesupply.com/siafusion/      → Sia Fusion (Korean-Japanese)
 ```
 
 ### File Structure
@@ -39,7 +41,8 @@ sites/keekuzcom/
 │   ├── sweetgarden/            # Sweet Garden client site
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
 │   ├── verdant/                # Verdant (standalone)
-│   └── ysg/                    # YSG Halal (standalone)
+│   ├── ysg/                    # YSG Halal (standalone)
+│   └── siafusion/              # Sia Fusion (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
 │   ├── dinos/                  # Dinos components
