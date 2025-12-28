@@ -1,13 +1,29 @@
 # Claude Supply - Agency & Client Sites
 
-Single Next.js app hosting the Claude Supply agency website and client test sites.
+Single Next.js app hosting the Claude Supply agency website and client sites.
+
+## Live Sites
+
+| Route | Site | Description |
+|-------|------|-------------|
+| `/` | Agency Home | Claude Supply agency homepage |
+| `/keekuzcom` | Keekuz | Restaurant client site |
+| `/dinos` | Dinos | Restaurant client site |
+| `/sweetgarden` | Sweet Garden | Bakery client site |
+| `/pingsbistro` | Ping's Bistro | Hunan Chinese restaurant (bilingual EN/中文) |
+| `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
+| `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
 
 ## Structure
 
 ```
 claudesupply.com/                → Agency website
-claudesupply.com/keekuzcom/...   → Keekuz client site
-claudesupply.com/[client]/...    → Future client sites
+claudesupply.com/keekuzcom/      → Keekuz restaurant
+claudesupply.com/dinos/          → Dinos restaurant
+claudesupply.com/sweetgarden/    → Sweet Garden bakery
+claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
+claudesupply.com/verdant/        → Verdant (healthy bowls)
+claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
 ```
 
 ### File Structure
@@ -18,17 +34,20 @@ sites/keekuzcom/
 │   ├── layout.tsx              # Root layout (agency)
 │   ├── page.tsx                # Agency homepage
 │   ├── globals.css
-│   └── keekuzcom/              # Client site route
-│       ├── layout.tsx          # Client-specific layout
-│       ├── page.tsx            # Client homepage
-│       ├── menu/
-│       ├── about/
-│       └── ...
+│   ├── keekuzcom/              # Keekuz client site
+│   ├── dinos/                  # Dinos client site
+│   ├── sweetgarden/            # Sweet Garden client site
+│   ├── pingsbistro/            # Ping's Bistro (standalone)
+│   ├── verdant/                # Verdant (standalone)
+│   └── ysg/                    # YSG Halal (standalone)
 ├── components/
-│   ├── keekuzcom/              # Client-specific components
-│   └── ...
+│   ├── keekuzcom/              # Keekuz components
+│   ├── dinos/                  # Dinos components
+│   └── sweetgarden/            # Sweet Garden components
 ├── data/
-│   └── keekuzcom/              # Client-specific data
+│   ├── keekuzcom/              # Keekuz data
+│   ├── dinos/                  # Dinos data
+│   └── sweetgarden/            # Sweet Garden data
 └── ...
 ```
 
@@ -40,10 +59,16 @@ npm run dev                     # Run locally at localhost:3000
 ```
 
 - Agency site: `localhost:3000/`
-- Client site: `localhost:3000/keekuzcom/`
+- Client sites: `localhost:3000/[sitename]/`
 
 ## Adding a New Client Site
 
+### Simple (Standalone page)
+1. Create route folder: `app/newclient/`
+2. Add `layout.tsx` and `page.tsx` with inline styles
+3. Push to GitHub → auto-deploys to `claudesupply.com/newclient/`
+
+### Full (With components/data)
 1. Create route folder: `app/newclient/`
 2. Add `layout.tsx` and `page.tsx`
 3. Create components: `components/newclient/`
@@ -58,7 +83,7 @@ npm run dev                     # Run locally at localhost:3000
 
 ## Tech Stack
 
-- Next.js 16 (App Router)
-- React 18
+- Next.js 15 (App Router)
+- React 19
 - TypeScript
 - Tailwind CSS
