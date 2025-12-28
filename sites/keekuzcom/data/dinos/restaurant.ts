@@ -35,8 +35,10 @@ export const restaurantInfo = {
     facebook: 'https://facebook.com/dinosdiner',
   },
   colors: {
-    primary: '#dc2626',
-    secondary: '#fbbf24',
+    primary: '#1e3a5f',    // Deep navy - trustworthy, American
+    secondary: '#b91c1c',  // Warm brick red - appetite, warmth
+    accent: '#d97706',     // Golden amber - CTAs, highlights
+    cream: '#faf7f2',      // Warm cream - backgrounds
   },
   copyright: '© 2024 Dino\'s Diner. All rights reserved.',
 };
