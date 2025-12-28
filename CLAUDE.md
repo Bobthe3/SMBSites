@@ -1,54 +1,60 @@
-# Site Deployment Monorepo
+# Claude Supply - Agency & Client Sites
 
-Multi-site deployment repository for claudesupply.com subfolders.
+Single Next.js app hosting the Claude Supply agency website and client test sites.
 
 ## Structure
 
 ```
-sites/
-├── keekuzcom/     → claudesupply.com/keekuzcom/
-├── template/      → claudesupply.com/template/
-└── [new-site]/    → claudesupply.com/[new-site]/
+claudesupply.com/                → Agency website
+claudesupply.com/keekuzcom/...   → Keekuz client site
+claudesupply.com/[client]/...    → Future client sites
 ```
 
-## Commands
+### File Structure
 
-### Development
+```
+sites/keekuzcom/
+├── app/
+│   ├── layout.tsx              # Root layout (agency)
+│   ├── page.tsx                # Agency homepage
+│   ├── globals.css
+│   └── keekuzcom/              # Client site route
+│       ├── layout.tsx          # Client-specific layout
+│       ├── page.tsx            # Client homepage
+│       ├── menu/
+│       ├── about/
+│       └── ...
+├── components/
+│   ├── keekuzcom/              # Client-specific components
+│   └── ...
+├── data/
+│   └── keekuzcom/              # Client-specific data
+└── ...
+```
+
+## Development
+
 ```bash
-npm run dev:keekuzcom    # Run keekuzcom locally (port 3000)
-npm run dev:template     # Run template locally (port 3000)
+cd sites/keekuzcom
+npm run dev                     # Run locally at localhost:3000
 ```
 
-### Build
-```bash
-npm run build:keekuzcom  # Build keekuzcom → sites/keekuzcom/out/
-npm run build:template   # Build template → sites/template/out/
-npm run build:all        # Build all sites
-```
+- Agency site: `localhost:3000/`
+- Client site: `localhost:3000/keekuzcom/`
 
-## Sites
+## Adding a New Client Site
 
-| Folder | URL | Description |
-|--------|-----|-------------|
-| keekuzcom | claudesupply.com/keekuzcom/ | Keeku da Dhaba restaurant website |
-| template | claudesupply.com/template/ | Basic starter template |
-
-## Adding a New Site
-
-1. Copy the `template` folder: `cp -r sites/template sites/newsite`
-2. Update `sites/newsite/package.json` name to `"newsite"`
-3. Update `sites/newsite/next.config.js` basePath to `'/newsite'`
-4. Add scripts to root `package.json`:
-   ```json
-   "dev:newsite": "npm run dev --workspace=sites/newsite",
-   "build:newsite": "npm run build --workspace=sites/newsite"
-   ```
-5. Run `npm install` to register the new workspace
-6. Update this table with the new site info
+1. Create route folder: `app/newclient/`
+2. Add `layout.tsx` and `page.tsx`
+3. Create components: `components/newclient/`
+4. Create data: `data/newclient/`
+5. Push to GitHub → auto-deploys to `claudesupply.com/newclient/`
 
 ## Deployment
 
-Each site builds to static HTML in `sites/[name]/out/`. Upload the contents to the corresponding folder on claudesupply.com.
+- **GitHub repo:** github.com/Bobthe3/SMBSites
+- **Vercel:** Auto-deploys on push to master
+- **Root directory in Vercel:** `sites/keekuzcom`
 
 ## Tech Stack
 
