@@ -5,7 +5,8 @@
       "Bash(npm run build:*)",
       "Bash(npm run build:keekuzcom:*)",
       "Bash(npm run build:all:*)",
-      "mcp__firecrawl__firecrawl_scrape"
+      "mcp__firecrawl__firecrawl_scrape",
+      "Bash(mkdir:*)"
     ]
   }
 }
