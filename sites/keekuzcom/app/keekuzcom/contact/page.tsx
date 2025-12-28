@@ -1,7 +1,7 @@
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
-import ContactForm from '@/components/ContactForm';
-import GoogleMap from '@/components/GoogleMap';
-import { restaurantInfo } from '@/data/restaurant';
+import ContactForm from '@/components/keekuzcom/ContactForm';
+import GoogleMap from '@/components/keekuzcom/GoogleMap';
+import { restaurantInfo } from '@/data/keekuzcom/restaurant';
 
 export default function ContactPage() {
   return (

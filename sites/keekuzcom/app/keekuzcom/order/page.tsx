@@ -1,6 +1,6 @@
 import { Clock, Phone, MapPin, Truck, ExternalLink } from 'lucide-react';
-import DeliveryButtons from '@/components/DeliveryButtons';
-import { restaurantInfo } from '@/data/restaurant';
+import DeliveryButtons from '@/components/keekuzcom/DeliveryButtons';
+import { restaurantInfo } from '@/data/keekuzcom/restaurant';
 
 export default function OrderPage() {
   return (

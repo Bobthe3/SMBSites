@@ -15,8 +15,8 @@ import {
   ArrowRight,
   Plus,
 } from 'lucide-react';
-import { cateringPackages, cateringAddons, cateringInfo } from '@/data/catering';
-import { restaurantInfo } from '@/data/restaurant';
+import { cateringPackages, cateringAddons, cateringInfo } from '@/data/keekuzcom/catering';
+import { restaurantInfo } from '@/data/keekuzcom/restaurant';
 
 export default function CateringPage() {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);

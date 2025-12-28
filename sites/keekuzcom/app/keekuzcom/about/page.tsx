@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, Heart, Leaf, Users, ArrowRight, Flame, ChefHat } from 'lucide-react';
-import { restaurantInfo } from '@/data/restaurant';
+import { restaurantInfo } from '@/data/keekuzcom/restaurant';
 
 export default function AboutPage() {
   return (
@@ -220,13 +220,13 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/menu"
+              href="/keekuzcom/menu"
               className="inline-flex items-center justify-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
             >
               Explore Menu
             </Link>
             <Link
-              href="/order"
+              href="/keekuzcom/order"
               className="inline-flex items-center justify-center gap-2 bg-white text-dark px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition"
             >
               Order Online

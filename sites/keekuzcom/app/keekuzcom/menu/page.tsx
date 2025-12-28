@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import MenuCard from '@/components/MenuCard';
-import DeliveryButtons from '@/components/DeliveryButtons';
-import { menuItems, categories } from '@/data/menu';
+import MenuCard from '@/components/keekuzcom/MenuCard';
+import DeliveryButtons from '@/components/keekuzcom/DeliveryButtons';
+import { menuItems, categories } from '@/data/keekuzcom/menu';
 import { Leaf, Flame } from 'lucide-react';
 
 export default function MenuPage() {
