@@ -21,7 +21,7 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/sweetgarden" className="text-2xl font-bold text-pink-600">
+          <Link href="/sweetgarden" className="text-2xl font-bold text-red-600">
             {restaurantInfo.name}
           </Link>
 
@@ -31,13 +31,13 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition ${
-                  pathname === item.href ? 'text-pink-600' : 'text-gray-600 hover:text-pink-600'
+                  pathname === item.href ? 'text-red-600' : 'text-gray-600 hover:text-red-600'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <a href={`tel:${restaurantInfo.phone}`} className="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-pink-600 transition">
+            <a href={restaurantInfo.orderOnline} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-600 transition">
               <Phone className="w-4 h-4" />
               Order
             </a>

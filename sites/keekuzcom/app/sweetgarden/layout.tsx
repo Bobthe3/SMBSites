@@ -5,10 +5,10 @@ import StructuredData from '@/components/sweetgarden/StructuredData';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sweet Garden Bakery | Artisan Baked Goods',
-    template: '%s | Sweet Garden Bakery',
+    default: 'Sweet Garden | Japanese Cuisine & Asian BBQ',
+    template: '%s | Sweet Garden',
   },
-  description: 'Artisan baked goods and fresh coffee in Palo Alto, CA. Croissants, breads, cakes, and more.',
+  description: 'Japanese cuisine and Asian BBQ in Fremont, CA. Fresh sushi rolls, sizzling iron plate dishes, and grilled skewers.',
 };
 
 export default function SweetgardenLayout({ children }: { children: React.ReactNode }) {

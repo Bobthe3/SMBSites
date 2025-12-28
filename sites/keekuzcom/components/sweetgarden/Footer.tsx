@@ -4,11 +4,11 @@ import { restaurantInfo } from '@/data/sweetgarden/restaurant';
 
 export default function Footer() {
   return (
-    <footer className="bg-pink-50 py-12">
+    <footer className="bg-amber-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-pink-600 mb-4">{restaurantInfo.name}</h3>
+            <h3 className="text-xl font-bold text-red-600 mb-4">{restaurantInfo.name}</h3>
             <p className="text-gray-600">{restaurantInfo.tagline}</p>
           </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-600">
-              <a href={`tel:${restaurantInfo.phone}`} className="flex items-center gap-2 hover:text-pink-600">
+              <a href={`tel:${restaurantInfo.phone}`} className="flex items-center gap-2 hover:text-red-600">
                 <Phone className="w-4 h-4" /> {restaurantInfo.phoneFormatted}
               </a>
               <p className="flex items-start gap-2">
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-pink-200 mt-8 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-amber-200 mt-8 pt-8 text-center text-gray-500 text-sm">
           {restaurantInfo.copyright}
         </div>
       </div>
