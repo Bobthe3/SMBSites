@@ -34,7 +34,7 @@ export const restaurantInfo = {
   social: {
     instagram: "#",
     facebook: "#",
-    yelp: "#",
+    yelp: "https://www.yelp.com/biz/keeku-da-dhaba-fremont-2",
   },
 
   mapCoordinates: {
@@ -54,21 +54,21 @@ export const restaurantInfo = {
   deliveryServices: [
     {
       name: "DoorDash",
-      url: "https://www.doordash.com/store/keeku-da-dhaba-fremont-27898814/",
+      url: "https://www.doordash.com/store/keeku-da-dhaba-fremont-27834307/",
       color: "#FF3008",
       icon: "doordash",
     },
     {
       name: "Uber Eats",
-      url: "https://www.ubereats.com/store/keeku-da-dhaba/",
+      url: "https://www.ubereats.com/store/keeku-da-dhabas/ik1JDkVHVm-t-uRFPZxlCw",
       color: "#06C167",
       icon: "ubereats",
     },
     {
-      name: "Grubhub",
-      url: "https://www.grubhub.com/restaurant/keeku-da-dhaba-fremont/",
-      color: "#F63440",
-      icon: "grubhub",
+      name: "Postmates",
+      url: "https://postmates.com/store/keeku-da-dhabas/ik1JDkVHVm-t-uRFPZxlCw",
+      color: "#000000",
+      icon: "postmates",
     },
   ],
 
