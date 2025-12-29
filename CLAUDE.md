@@ -14,6 +14,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
 | `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
 | `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
+| `/dinas` | Dina's Family Restaurant | Classic American diner, homestyle cooking (Fremont, CA) |
 | `/sia-fusion-versions/v1/` | Sia Fusion V1 | Warm, homey theme with real food photos |
 
 ## Sia Fusion Design Versions
