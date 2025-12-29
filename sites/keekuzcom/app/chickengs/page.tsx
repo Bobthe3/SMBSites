@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import {
   Phone, MapPin, Clock, Star, ChevronLeft, ChevronRight,
   Flame, Leaf, Instagram, Facebook, Mail, ExternalLink,
-  UtensilsCrossed, Coffee, Drumstick, Sandwich, FrenchFries,
-  CircleCheck, Users, ShoppingBag
+  UtensilsCrossed, Coffee, Drumstick, Sandwich,
+  CheckCircle, Users, ShoppingBag
 } from 'lucide-react';
 
 // Real product images from DoorDash CDN
@@ -1256,7 +1256,7 @@ export default function ChickenGsPage() {
           <a href="#reviews">Reviews</a>
           <a href="#location">Location</a>
           <div className="halal-badge">
-            <CircleCheck size={12} />
+            <CheckCircle size={12} />
             Halal Certified
           </div>
         </div>
@@ -1290,7 +1290,7 @@ export default function ChickenGsPage() {
             <div className="hero-text">
               <div className="hero-badges">
                 <div className="halal-badge">
-                  <CircleCheck size={12} />
+                  <CheckCircle size={12} />
                   Certified Halal
                 </div>
               </div>
@@ -1772,7 +1772,7 @@ export default function ChickenGsPage() {
                 </div>
                 <div className="story-feature">
                   <div className="story-feature-icon">
-                    <CircleCheck size={20} color="white" />
+                    <CheckCircle size={20} color="white" />
                   </div>
                   <div className="story-feature-text">
                     <strong>Certified Halal</strong>
@@ -1905,7 +1905,7 @@ export default function ChickenGsPage() {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Chicken G&apos;s. All rights reserved.</p>
           <div className="halal-badge">
-            <CircleCheck size={12} />
+            <CheckCircle size={12} />
             Certified Halal
           </div>
         </div>
