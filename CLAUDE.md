@@ -13,6 +13,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
 | `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
 | `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
+| `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
 | `/sia-fusion-versions/v1/` | Sia Fusion V1 | Warm, homey theme with real food photos |
 
 ## Sia Fusion Design Versions
@@ -35,6 +36,7 @@ claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
 claudesupply.com/verdant/        → Verdant (healthy bowls)
 claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
 claudesupply.com/siafusion/      → Sia Fusion (Korean-Japanese)
+claudesupply.com/chickengs/      → Chicken G's (halal fried chicken)
 ```
 
 ### File Structure
@@ -50,7 +52,8 @@ sites/keekuzcom/
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
 │   ├── verdant/                # Verdant (standalone)
 │   ├── ysg/                    # YSG Halal (standalone)
-│   └── siafusion/              # Sia Fusion (standalone)
+│   ├── siafusion/              # Sia Fusion (standalone)
+│   └── chickengs/              # Chicken G's (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
 │   └── dinos/                  # Dinos components
