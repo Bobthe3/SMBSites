@@ -13,6 +13,17 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
 | `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
 | `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
+| `/sia-fusion-versions/v1/` | Sia Fusion V1 | Warm, homey theme with real food photos |
+
+## Sia Fusion Design Versions
+
+Static HTML design explorations for Sia Fusion (in `public/sia-fusion-versions/`):
+
+| Version | Theme | Description |
+|---------|-------|-------------|
+| V1 | Warm & Homey | Cream/terracotta palette, rounded corners, Playfair Display + DM Sans fonts, real Unsplash food photos |
+| V2 | (Pending) | TBD |
+| V3 | (Pending) | TBD |
 
 ## Structure
 
@@ -46,6 +57,9 @@ sites/keekuzcom/
 ├── data/
 │   ├── keekuzcom/              # Keekuz data
 │   └── dinos/                  # Dinos data
+├── public/
+│   └── sia-fusion-versions/    # Static HTML design versions
+│       └── v1/                 # Version 1: Warm & Homey
 └── ...
 ```
 
