@@ -15,6 +15,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
 | `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
 | `/dinas` | Dina's Family Restaurant | Classic American diner, homestyle cooking (Fremont, CA) |
+| `/allpurposepainting` | All Purpose Painting | Premium painting contractor (Fremont, CA) |
 | `/sia-fusion-versions/v1/` | Sia Fusion V1 | Warm, homey theme with real food photos |
 
 ## Sia Fusion Design Versions
@@ -38,6 +39,7 @@ claudesupply.com/verdant/        → Verdant (healthy bowls)
 claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
 claudesupply.com/siafusion/      → Sia Fusion (Korean-Japanese)
 claudesupply.com/chickengs/      → Chicken G's (halal fried chicken)
+claudesupply.com/allpurposepainting/ → All Purpose Painting (painting contractor)
 ```
 
 ### File Structure
@@ -54,7 +56,8 @@ sites/keekuzcom/
 │   ├── verdant/                # Verdant (standalone)
 │   ├── ysg/                    # YSG Halal (standalone)
 │   ├── siafusion/              # Sia Fusion (standalone)
-│   └── chickengs/              # Chicken G's (standalone)
+│   ├── chickengs/              # Chicken G's (standalone)
+│   └── allpurposepainting/     # All Purpose Painting (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
 │   └── dinos/                  # Dinos components
