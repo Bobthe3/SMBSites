@@ -10,23 +10,8 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/keekuzcom` | Keekuz | Restaurant client site |
 | `/dinos` | Dinos | Restaurant client site |
 | `/pingsbistro` | Ping's Bistro | Hunan Chinese restaurant (bilingual EN/中文) |
-| `/verdant` | Verdant | Healthy fast-casual restaurant (Sweetgreen-style) |
-| `/ysg` | YSG Halal | Pakistani-American fusion halal restaurant |
-| `/siafusion` | Sia Fusion | Korean-Japanese fusion eatery (late night) |
 | `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
-| `/dinas` | Dina's Family Restaurant | Classic American diner, homestyle cooking (Fremont, CA) |
 | `/allpurposepainting` | All Purpose Painting | Premium painting contractor (Fremont, CA) |
-| `/sia-fusion-versions/v1/` | Sia Fusion V1 | Warm, homey theme with real food photos |
-
-## Sia Fusion Design Versions
-
-Static HTML design explorations for Sia Fusion (in `public/sia-fusion-versions/`):
-
-| Version | Theme | Description |
-|---------|-------|-------------|
-| V1 | Warm & Homey | Cream/terracotta palette, rounded corners, Playfair Display + DM Sans fonts, real Unsplash food photos |
-| V2 | (Pending) | TBD |
-| V3 | (Pending) | TBD |
 
 ## Structure
 
@@ -35,9 +20,6 @@ claudesupply.com/                → Agency website
 claudesupply.com/keekuzcom/      → Keekuz restaurant
 claudesupply.com/dinos/          → Dinos restaurant
 claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
-claudesupply.com/verdant/        → Verdant (healthy bowls)
-claudesupply.com/ysg/            → YSG Halal (Pakistani-American)
-claudesupply.com/siafusion/      → Sia Fusion (Korean-Japanese)
 claudesupply.com/chickengs/      → Chicken G's (halal fried chicken)
 claudesupply.com/allpurposepainting/ → All Purpose Painting (painting contractor)
 ```
@@ -53,9 +35,6 @@ sites/keekuzcom/
 │   ├── keekuzcom/              # Keekuz client site
 │   ├── dinos/                  # Dinos client site
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
-│   ├── verdant/                # Verdant (standalone)
-│   ├── ysg/                    # YSG Halal (standalone)
-│   ├── siafusion/              # Sia Fusion (standalone)
 │   ├── chickengs/              # Chicken G's (standalone)
 │   └── allpurposepainting/     # All Purpose Painting (standalone)
 ├── components/
@@ -64,9 +43,6 @@ sites/keekuzcom/
 ├── data/
 │   ├── keekuzcom/              # Keekuz data
 │   └── dinos/                  # Dinos data
-├── public/
-│   └── sia-fusion-versions/    # Static HTML design versions
-│       └── v1/                 # Version 1: Warm & Homey
 └── ...
 ```
 
