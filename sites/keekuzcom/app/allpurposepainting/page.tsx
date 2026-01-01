@@ -1,43 +1,10 @@
 'use client'
 
-import { useEffect, useState, FormEvent } from 'react'
+import { useState, FormEvent } from 'react'
 
 export default function AllPurposePaintingPage() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          (entry.target as HTMLElement).style.opacity = '1';
-          (entry.target as HTMLElement).style.transform = 'translateY(0)'
-        }
-      })
-    }, observerOptions)
-
-    document.querySelectorAll('.service-card, .why-card, .review-card').forEach(el => {
-      (el as HTMLElement).style.opacity = '0';
-      (el as HTMLElement).style.transform = 'translateY(20px)';
-      (el as HTMLElement).style.transition = 'all 0.6s ease'
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -102,13 +69,8 @@ export default function AllPurposePaintingPage() {
           right: 0;
           z-index: 1000;
           padding: 1rem 2rem;
-          transition: all 0.4s ease;
-        }
-
-        .nav.scrolled {
           background: var(--white);
           box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-          padding: 0.75rem 2rem;
         }
 
         .nav-inner {
@@ -152,23 +114,6 @@ export default function AllPurposePaintingPage() {
           text-decoration: none;
           font-size: 0.9rem;
           font-weight: 500;
-          transition: color 0.3s ease;
-          position: relative;
-        }
-
-        .nav-links a:not(.btn)::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background: var(--terracotta);
-          transition: width 0.3s ease;
-        }
-
-        .nav-links a:not(.btn):hover::after {
-          width: 100%;
         }
 
         .nav-links a:hover {
@@ -188,13 +133,10 @@ export default function AllPurposePaintingPage() {
           font-weight: 600;
           text-decoration: none;
           cursor: pointer;
-          transition: all 0.3s ease;
         }
 
         .btn:hover {
           background: var(--terracotta-light);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(196, 120, 90, 0.4);
         }
 
         .btn-outline {
@@ -206,7 +148,6 @@ export default function AllPurposePaintingPage() {
         .btn-outline:hover {
           background: var(--forest);
           color: var(--white) !important;
-          box-shadow: 0 4px 15px rgba(26, 58, 47, 0.3);
         }
 
         .btn-large {
@@ -228,7 +169,6 @@ export default function AllPurposePaintingPage() {
           width: 24px;
           height: 2px;
           background: var(--forest);
-          transition: all 0.3s ease;
         }
 
         .hero {
@@ -278,32 +218,12 @@ export default function AllPurposePaintingPage() {
           color: var(--forest);
           margin-bottom: 1.5rem;
           box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-          animation: fadeInUp 0.8s ease forwards;
-        }
-
-        .hero-badge svg {
-          width: 18px;
-          height: 18px;
-          fill: var(--gold);
-        }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
         }
 
         .hero h1 {
           font-size: clamp(2.5rem, 5vw, 4rem);
           color: var(--forest);
           margin-bottom: 1.5rem;
-          animation: fadeInUp 0.8s ease 0.1s forwards;
-          opacity: 0;
         }
 
         .hero h1 span {
@@ -316,8 +236,6 @@ export default function AllPurposePaintingPage() {
           color: var(--gray);
           margin-bottom: 2rem;
           max-width: 500px;
-          animation: fadeInUp 0.8s ease 0.2s forwards;
-          opacity: 0;
         }
 
         .hero-ctas {
@@ -325,16 +243,12 @@ export default function AllPurposePaintingPage() {
           gap: 1rem;
           flex-wrap: wrap;
           margin-bottom: 3rem;
-          animation: fadeInUp 0.8s ease 0.3s forwards;
-          opacity: 0;
         }
 
         .hero-trust {
           display: flex;
           align-items: center;
           gap: 2rem;
-          animation: fadeInUp 0.8s ease 0.4s forwards;
-          opacity: 0;
         }
 
         .trust-item {
@@ -359,8 +273,6 @@ export default function AllPurposePaintingPage() {
 
         .hero-visual {
           position: relative;
-          animation: fadeInUp 0.8s ease 0.3s forwards;
-          opacity: 0;
         }
 
         .hero-image-container {
@@ -547,29 +459,9 @@ export default function AllPurposePaintingPage() {
           background: var(--cream);
           padding: 2.5rem;
           border-radius: 8px;
-          transition: all 0.4s ease;
           position: relative;
           overflow: hidden;
-        }
-
-        .service-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 4px;
-          height: 0;
-          background: var(--terracotta);
-          transition: height 0.4s ease;
-        }
-
-        .service-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-        }
-
-        .service-card:hover::before {
-          height: 100%;
+          border-left: 4px solid var(--terracotta);
         }
 
         .service-icon {
@@ -809,18 +701,12 @@ export default function AllPurposePaintingPage() {
         }
 
         .why-card {
-          background: rgba(255,255,255,0.05);
+          background: rgba(255,255,255,0.08);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255,255,255,0.1);
           padding: 2rem;
           border-radius: 8px;
           text-align: center;
-          transition: all 0.4s ease;
-        }
-
-        .why-card:hover {
-          background: rgba(255,255,255,0.1);
-          transform: translateY(-5px);
         }
 
         .why-icon {
@@ -1119,13 +1005,12 @@ export default function AllPurposePaintingPage() {
         .form-group textarea {
           width: 100%;
           padding: 0.875rem 1rem;
-          border: 2px solid transparent;
+          border: 2px solid #e0e0e0;
           background: var(--white);
           border-radius: 6px;
           font-family: inherit;
           font-size: 1rem;
           color: var(--charcoal);
-          transition: all 0.3s ease;
         }
 
         .form-group input:focus,
@@ -1211,7 +1096,6 @@ export default function AllPurposePaintingPage() {
           color: rgba(255,255,255,0.7);
           text-decoration: none;
           font-size: 0.95rem;
-          transition: color 0.3s ease;
         }
 
         .footer-col ul a:hover {
@@ -1337,7 +1221,7 @@ export default function AllPurposePaintingPage() {
       `}</style>
 
       {/* Navigation */}
-      <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className="nav">
         <div className="nav-inner">
           <a href="#" className="logo">
             <span className="logo-main">All Purpose Painting</span>
@@ -1368,7 +1252,6 @@ export default function AllPurposePaintingPage() {
         <div className="hero-inner">
           <div className="hero-content">
             <div className="hero-badge">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               BuildZoom Top 15% Contractor in California
             </div>
             <h1>Painting Excellence,<br/><span>Since 1999</span></h1>
@@ -1416,8 +1299,8 @@ export default function AllPurposePaintingPage() {
                   <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
                 <div className="floating-text">
-                  <strong>5.0 on Houzz</strong>
-                  <span>39+ Reviews on Yelp</span>
+                  <strong>4.9★ on Yelp</strong>
+                  <span>39+ Reviews</span>
                 </div>
               </div>
             </div>
@@ -1666,7 +1549,7 @@ export default function AllPurposePaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p className="review-text">&quot;Chris and his team did an outstanding job on our entire home interior. Their attention to detail was remarkable, and they went above and beyond to ensure every surface was perfect. Highly recommend!&quot;</p>
+            <p className="review-text">Chris and his team did an outstanding job on our entire home interior. Their attention to detail was remarkable, and they went above and beyond to ensure every surface was perfect. Highly recommend!</p>
             <div className="review-author">
               <div className="review-avatar">JM</div>
               <div className="review-meta">
@@ -1683,7 +1566,7 @@ export default function AllPurposePaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p className="review-text">&quot;We hired All Purpose for our exterior painting and couldn&apos;t be happier. Professional from start to finish, great communication, and the quality of work exceeded our expectations. Our house looks brand new!&quot;</p>
+            <p className="review-text">We hired All Purpose for our exterior painting and couldn&apos;t be happier. Professional from start to finish, great communication, and the quality of work exceeded our expectations. Our house looks brand new!</p>
             <div className="review-author">
               <div className="review-avatar">RK</div>
               <div className="review-meta">
@@ -1700,7 +1583,7 @@ export default function AllPurposePaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p className="review-text">&quot;Chris refinished our kitchen cabinets and they look absolutely stunning. He was meticulous about prep work and the finish is flawless. Saved us thousands compared to replacing them. Will definitely use again!&quot;</p>
+            <p className="review-text">Chris refinished our kitchen cabinets and they look absolutely stunning. He was meticulous about prep work and the finish is flawless. Saved us thousands compared to replacing them. Will definitely use again!</p>
             <div className="review-author">
               <div className="review-avatar">SL</div>
               <div className="review-meta">
@@ -1865,7 +1748,7 @@ export default function AllPurposePaintingPage() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 All Purpose Painting &amp; Restoration. CA License #901359. All rights reserved.</p>
+            <p>&copy; 2025 All Purpose Painting &amp; Restoration. CA License #901359. All rights reserved.</p>
             <div className="footer-legal">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
