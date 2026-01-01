@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Globe, TrendingUp, Zap, Mail, ArrowRight, X } from 'lucide-react';
+import { Globe, TrendingUp, Zap, Mail, ArrowRight, X, MessageSquare, Palette, Code, Rocket } from 'lucide-react';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -331,8 +331,101 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section id="process" className="py-24 md:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <span
+              className="font-sans text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+              style={{ color: 'var(--burgundy)' }}
+            >
+              Our Process
+            </span>
+            <h2
+              className="font-serif text-4xl md:text-5xl font-medium"
+              style={{ color: 'var(--charcoal)' }}
+            >
+              How We Work Together
+            </h2>
+          </div>
+
+          {/* Process Steps */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+            {[
+              {
+                icon: MessageSquare,
+                step: '01',
+                title: 'Discovery',
+                description: 'We learn about your business, goals, and vision. A focused conversation to understand what success looks like for you.',
+              },
+              {
+                icon: Palette,
+                step: '02',
+                title: 'Design',
+                description: 'We craft a custom design that reflects your brand and resonates with your customers. You review and refine until it\'s perfect.',
+              },
+              {
+                icon: Code,
+                step: '03',
+                title: 'Development',
+                description: 'We build your site with modern technology—fast, secure, and optimized for search engines and mobile devices.',
+              },
+              {
+                icon: Rocket,
+                step: '04',
+                title: 'Launch & Support',
+                description: 'Your site goes live. We handle hosting, updates, and ongoing support so you can focus on running your business.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                {/* Connector line for desktop */}
+                {i < 3 && (
+                  <div
+                    className="hidden lg:block absolute top-8 left-[60%] w-[80%] h-px"
+                    style={{ backgroundColor: 'var(--border)' }}
+                  ></div>
+                )}
+
+                <div className="relative">
+                  {/* Step number */}
+                  <span
+                    className="font-serif text-6xl font-medium opacity-10 absolute -top-4 -left-2"
+                    style={{ color: 'var(--burgundy)' }}
+                  >
+                    {item.step}
+                  </span>
+
+                  {/* Icon */}
+                  <div
+                    className="w-14 h-14 flex items-center justify-center mb-6 relative z-10"
+                    style={{ backgroundColor: 'var(--burgundy)' }}
+                  >
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+
+                  <h3
+                    className="font-serif text-xl font-medium mb-3"
+                    style={{ color: 'var(--charcoal)' }}
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="font-sans text-sm leading-relaxed"
+                    style={{ color: 'var(--gray-warm)' }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 md:py-32 bg-white">
+      <section id="pricing" className="py-24 md:py-32" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -410,8 +503,8 @@ export default function Home() {
                 className="font-sans text-lg leading-relaxed mb-10"
                 style={{ color: 'var(--gray-warm)' }}
               >
-                Tell us about your business and goals. We&apos;ll respond within 24 hours
-                with a personalized assessment and clear next steps.
+                Book a free 30-minute call to discuss your business goals.
+                No pressure, just a conversation about how we can help.
               </p>
 
               {/* Email */}
@@ -434,99 +527,54 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Right Column - Form */}
+            {/* Right Column - Calendly Embed */}
             <div
-              className="bg-white p-8 lg:p-10 border"
-              style={{ borderColor: 'var(--border)' }}
+              className="bg-white border overflow-hidden"
+              style={{ borderColor: 'var(--border)', minHeight: '500px' }}
             >
-              <form className="space-y-6">
-                <div>
-                  <label
-                    className="font-sans text-sm font-medium mb-2 block"
-                    style={{ color: 'var(--charcoal)' }}
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full font-sans bg-white border px-4 py-3 focus:outline-none transition-colors"
-                    style={{
-                      borderColor: 'var(--border)',
-                      color: 'var(--charcoal)',
-                    }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--burgundy)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label
-                    className="font-sans text-sm font-medium mb-2 block"
-                    style={{ color: 'var(--charcoal)' }}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full font-sans bg-white border px-4 py-3 focus:outline-none transition-colors"
-                    style={{
-                      borderColor: 'var(--border)',
-                      color: 'var(--charcoal)',
-                    }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--burgundy)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-                    placeholder="you@company.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    className="font-sans text-sm font-medium mb-2 block"
-                    style={{ color: 'var(--charcoal)' }}
-                  >
-                    Business Type
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full font-sans bg-white border px-4 py-3 focus:outline-none transition-colors"
-                    style={{
-                      borderColor: 'var(--border)',
-                      color: 'var(--charcoal)',
-                    }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--burgundy)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-                    placeholder="e.g., Restaurant, Retail, Professional Services"
-                  />
-                </div>
-                <div>
-                  <label
-                    className="font-sans text-sm font-medium mb-2 block"
-                    style={{ color: 'var(--charcoal)' }}
-                  >
-                    Project Details
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full font-sans bg-white border px-4 py-3 focus:outline-none transition-colors resize-none"
-                    style={{
-                      borderColor: 'var(--border)',
-                      color: 'var(--charcoal)',
-                    }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--burgundy)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-                    placeholder="Tell us about your goals and timeline"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full font-sans text-sm font-medium tracking-wide py-4 transition-all duration-300 hover:opacity-90"
-                  style={{
-                    backgroundColor: 'var(--burgundy)',
-                    color: 'white',
-                  }}
+              {/* TODO: Replace with actual Calendly embed */}
+              {/*
+                To add your Calendly:
+                1. Go to Calendly > Share > Add to website > Inline embed
+                2. Copy the embed code
+                3. Replace the placeholder below with:
+                   <iframe
+                     src="https://calendly.com/YOUR-USERNAME/YOUR-EVENT"
+                     width="100%"
+                     height="100%"
+                     frameBorder="0"
+                   />
+              */}
+              <div
+                className="w-full h-full flex flex-col items-center justify-center p-8 text-center"
+                style={{ minHeight: '500px', backgroundColor: '#FAFAFA' }}
+              >
+                <div
+                  className="w-16 h-16 flex items-center justify-center mb-6 rounded-full"
+                  style={{ backgroundColor: 'var(--burgundy)', opacity: 0.1 }}
                 >
-                  Send Message
-                </button>
-              </form>
+                  <div
+                    className="w-12 h-12 flex items-center justify-center rounded-full"
+                    style={{ backgroundColor: 'var(--burgundy)' }}
+                  >
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+                <p
+                  className="font-serif text-xl font-medium mb-2"
+                  style={{ color: 'var(--charcoal)' }}
+                >
+                  Calendly Booking
+                </p>
+                <p
+                  className="font-sans text-sm"
+                  style={{ color: 'var(--gray-light)' }}
+                >
+                  Scheduling widget will appear here
+                </p>
+              </div>
             </div>
           </div>
         </div>
