@@ -1,8 +1,10 @@
 'use client';
 
-import { Globe, TrendingUp, Zap, Mail, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Globe, TrendingUp, Zap, Mail, ArrowRight, X } from 'lucide-react';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <style jsx global>{`
@@ -85,6 +87,13 @@ export default function Home() {
                 Services
               </a>
               <a
+                href="#pricing"
+                className="font-sans text-sm tracking-wide link-underline"
+                style={{ color: 'var(--gray-warm)' }}
+              >
+                Pricing
+              </a>
+              <a
                 href="#contact"
                 className="font-sans text-sm tracking-wide link-underline"
                 style={{ color: 'var(--gray-warm)' }}
@@ -104,7 +113,11 @@ export default function Home() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2" aria-label="Menu">
+            <button
+              className="md:hidden p-2"
+              aria-label="Menu"
+              onClick={() => setMobileMenuOpen(true)}
+            >
               <div className="w-6 h-0.5 bg-gray-800 mb-1.5"></div>
               <div className="w-6 h-0.5 bg-gray-800 mb-1.5"></div>
               <div className="w-4 h-0.5 bg-gray-800"></div>
@@ -112,6 +125,78 @@ export default function Home() {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          {/* Menu Panel */}
+          <div
+            className="absolute right-0 top-0 h-full w-72 bg-white shadow-xl"
+            style={{ backgroundColor: 'var(--cream)' }}
+          >
+            {/* Close Button */}
+            <div className="flex justify-end p-6">
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" style={{ color: 'var(--charcoal)' }} />
+              </button>
+            </div>
+
+            {/* Mobile Navigation Links */}
+            <nav className="px-6 py-4">
+              <div className="flex flex-col gap-6">
+                <a
+                  href="#services"
+                  className="font-sans text-lg tracking-wide"
+                  style={{ color: 'var(--charcoal)' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Services
+                </a>
+                <a
+                  href="#pricing"
+                  className="font-sans text-lg tracking-wide"
+                  style={{ color: 'var(--charcoal)' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pricing
+                </a>
+                <a
+                  href="#contact"
+                  className="font-sans text-lg tracking-wide"
+                  style={{ color: 'var(--charcoal)' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </a>
+
+                <div className="pt-4 border-t" style={{ borderColor: 'var(--border)' }}>
+                  <a
+                    href="#contact"
+                    className="block font-sans text-base font-medium tracking-wide px-6 py-4 text-center transition-all duration-300"
+                    style={{
+                      backgroundColor: 'var(--burgundy)',
+                      color: 'white',
+                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Schedule a Consultation
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 md:pt-44 md:pb-32">
@@ -246,24 +331,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Teaser */}
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-8">
-            <div className="w-16 h-px" style={{ backgroundColor: 'var(--burgundy)' }}></div>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 md:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span
+              className="font-sans text-xs font-medium tracking-[0.2em] uppercase mb-4 block"
+              style={{ color: 'var(--burgundy)' }}
+            >
+              Pricing
+            </span>
+            <h2
+              className="font-serif text-4xl md:text-5xl font-medium mb-6"
+              style={{ color: 'var(--charcoal)' }}
+            >
+              Simple, Transparent Pricing
+            </h2>
+            <p
+              className="font-sans text-lg max-w-2xl mx-auto"
+              style={{ color: 'var(--gray-warm)' }}
+            >
+              No hidden fees. No surprises. Just clear monthly pricing tailored to your business needs.
+            </p>
           </div>
-          <p
-            className="font-serif text-2xl md:text-3xl font-medium mb-4"
-            style={{ color: 'var(--charcoal)' }}
-          >
-            Projects starting at <span style={{ color: 'var(--burgundy)' }}>$97/month</span>
-          </p>
-          <p
-            className="font-sans text-base"
-            style={{ color: 'var(--gray-warm)' }}
-          >
-            Transparent monthly pricing tailored to your business needs. Schedule a consultation to discuss your project.
-          </p>
+
+          {/* Pricing Highlight */}
+          <div className="text-center">
+            <div className="flex justify-center mb-8">
+              <div className="w-16 h-px" style={{ backgroundColor: 'var(--burgundy)' }}></div>
+            </div>
+            <p
+              className="font-serif text-3xl md:text-4xl font-medium mb-4"
+              style={{ color: 'var(--charcoal)' }}
+            >
+              Projects starting at <span style={{ color: 'var(--burgundy)' }}>$97/month</span>
+            </p>
+            <p
+              className="font-sans text-base mb-8"
+              style={{ color: 'var(--gray-warm)' }}
+            >
+              Schedule a consultation to discuss your project and get a custom quote.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-3 font-sans text-sm font-medium tracking-wide px-8 py-4 transition-all duration-300 hover:opacity-90"
+              style={{
+                backgroundColor: 'var(--burgundy)',
+                color: 'white',
+              }}
+            >
+              Get a Quote
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -441,6 +562,13 @@ export default function Home() {
                 style={{ color: 'var(--gray-warm)' }}
               >
                 Services
+              </a>
+              <a
+                href="#pricing"
+                className="font-sans text-sm link-underline"
+                style={{ color: 'var(--gray-warm)' }}
+              >
+                Pricing
               </a>
               <a
                 href="#contact"
