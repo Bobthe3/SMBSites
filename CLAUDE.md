@@ -27,7 +27,7 @@ claudesupply.com/allpurposepainting/ → All Purpose Painting (painting contract
 ### File Structure
 
 ```
-sites/keekuzcom/
+sites/
 ├── app/
 │   ├── layout.tsx              # Root layout (agency)
 │   ├── page.tsx                # Agency homepage
@@ -49,7 +49,7 @@ sites/keekuzcom/
 ## Development
 
 ```bash
-cd sites/keekuzcom
+cd sites
 npm run dev                     # Run locally at localhost:3000
 ```
 
@@ -74,7 +74,7 @@ npm run dev                     # Run locally at localhost:3000
 
 - **GitHub repo:** github.com/Bobthe3/SMBSites
 - **Vercel:** Auto-deploys on push to master
-- **Root directory in Vercel:** `sites/keekuzcom`
+- **Root directory in Vercel:** `sites`
 
 ## Tech Stack
 
