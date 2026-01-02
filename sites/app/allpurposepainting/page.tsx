@@ -394,9 +394,9 @@ export default function AllPurposePaintingPage() {
 
         .section-label {
           display: inline-block;
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           text-transform: uppercase;
-          letter-spacing: 0.2em;
+          letter-spacing: 0.25em;
           color: var(--terracotta);
           margin-bottom: 1rem;
           font-weight: 600;
@@ -450,9 +450,10 @@ export default function AllPurposePaintingPage() {
         }
 
         .service-card h3 {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           color: var(--forest);
           margin-bottom: 0.75rem;
+          letter-spacing: -0.01em;
         }
 
         .service-card p {
@@ -1230,7 +1231,7 @@ export default function AllPurposePaintingPage() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8934e" strokeWidth="2">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                 </svg>
-                <span><strong>4.9</strong> on Yelp</span>
+                <a href="https://www.yelp.com/biz/all-purpose-painting-and-restoration-fremont" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}><strong>4.9</strong> on Yelp</a>
               </div>
               <div className="trust-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a2f" strokeWidth="2">
@@ -1286,16 +1287,6 @@ export default function AllPurposePaintingPage() {
             <div className="trust-badge-text">
               <strong>Fully Insured</strong>
               <span>$15,000 Bonded</span>
-            </div>
-          </div>
-          <div className="trust-divider"></div>
-          <div className="trust-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-            <div className="trust-badge-text">
-              <strong>BBB A- Rating</strong>
-              <span>Accredited Business</span>
             </div>
           </div>
         </div>
@@ -1453,7 +1444,7 @@ export default function AllPurposePaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <h3>Top-Rated Service</h3>
-            <p>4.9 stars on Yelp, 5 stars on Houzz, A- BBB rating, and 25+ Nextdoor recommendations.</p>
+            <p><a href="https://www.yelp.com/biz/all-purpose-painting-and-restoration-fremont" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>4.9 stars on Yelp</a>, 5 stars on Houzz, and 25+ Nextdoor recommendations.</p>
           </div>
           <div className="why-card">
             <div className="why-icon">
