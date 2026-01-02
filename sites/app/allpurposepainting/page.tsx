@@ -16,7 +16,7 @@ export default function AllPurposePaintingPage() {
     e.preventDefault()
     const target = document.querySelector(href)
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      target.scrollIntoView({ behavior: 'auto', block: 'start' })
       setIsMobileMenuOpen(false)
     }
   }
@@ -45,7 +45,7 @@ export default function AllPurposePaintingPage() {
         }
 
         html {
-          scroll-behavior: smooth;
+          scroll-behavior: auto;
         }
 
         body {
@@ -320,40 +320,6 @@ export default function AllPurposePaintingPage() {
           text-transform: uppercase;
           letter-spacing: 0.2em;
           opacity: 0.9;
-        }
-
-        .hero-floating-card {
-          position: absolute;
-          bottom: -30px;
-          left: -30px;
-          background: var(--white);
-          padding: 1.25rem 1.5rem;
-          border-radius: 8px;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-        }
-
-        .floating-stars {
-          display: flex;
-          gap: 2px;
-        }
-
-        .floating-stars svg {
-          width: 16px;
-          height: 16px;
-          fill: var(--gold);
-        }
-
-        .floating-text {
-          font-size: 0.85rem;
-        }
-
-        .floating-text strong {
-          display: block;
-          color: var(--forest);
-          font-size: 1rem;
         }
 
         .trust-bar {
@@ -1184,13 +1150,6 @@ export default function AllPurposePaintingPage() {
             gap: 1rem;
           }
 
-          .hero-floating-card {
-            position: relative;
-            bottom: auto;
-            left: auto;
-            margin-top: 1.5rem;
-          }
-
           .trust-bar-inner {
             gap: 1.5rem;
           }
@@ -1271,7 +1230,7 @@ export default function AllPurposePaintingPage() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b8934e" strokeWidth="2">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                 </svg>
-                <span><strong>4.9&#9733;</strong> on Yelp</span>
+                <span><strong>4.9</strong> on Yelp</span>
               </div>
               <div className="trust-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a3a2f" strokeWidth="2">
@@ -1288,19 +1247,6 @@ export default function AllPurposePaintingPage() {
                 <div className="hero-image-text">
                   <span className="years">26+</span>
                   <span className="label">Years of Excellence</span>
-                </div>
-              </div>
-              <div className="hero-floating-card">
-                <div className="floating-stars">
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <div className="floating-text">
-                  <strong>4.9★ on Yelp</strong>
-                  <span>39+ Reviews</span>
                 </div>
               </div>
             </div>
