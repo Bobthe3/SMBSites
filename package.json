@@ -13,5 +13,8 @@
     "build:template": "npm run build --workspace=sites/template",
     "start:template": "npm run start --workspace=sites/template",
     "build:all": "npm run build --workspaces"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0"
   }
 }

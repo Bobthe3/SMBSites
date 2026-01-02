@@ -13,6 +13,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
 | `/allpurposepainting` | All Purpose Painting | Premium painting contractor (Fremont, CA) |
 | `/jppainting` | JP Painting | Professional painting services (Redwood City, CA) |
+| `/electrician` | Electrician Template | Electrician website template (generic) |
 
 ## Structure
 
@@ -24,6 +25,7 @@ claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
 claudesupply.com/chickengs/      → Chicken G's (halal fried chicken)
 claudesupply.com/allpurposepainting/ → All Purpose Painting (painting contractor)
 claudesupply.com/jppainting/         → JP Painting (painting services, Redwood City)
+claudesupply.com/electrician/       → Electrician template (generic)
 ```
 
 ### File Structure
@@ -39,7 +41,8 @@ sites/
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
 │   ├── chickengs/              # Chicken G's (standalone)
 │   ├── allpurposepainting/     # All Purpose Painting (standalone)
-│   └── jppainting/             # JP Painting (standalone)
+│   ├── jppainting/             # JP Painting (standalone)
+│   └── electrician/            # Electrician template (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
 │   └── dinos/                  # Dinos components
