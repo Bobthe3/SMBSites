@@ -12,6 +12,7 @@ Single Next.js app hosting the Claude Supply agency website and client sites.
 | `/pingsbistro` | Ping's Bistro | Hunan Chinese restaurant (bilingual EN/中文) |
 | `/chickengs` | Chicken G's | Halal fried chicken restaurant (Fremont, CA) |
 | `/allpurposepainting` | All Purpose Painting | Premium painting contractor (Fremont, CA) |
+| `/ejpainting` | EJ Painting | Professional painting services (Menlo Park, CA) |
 
 ## Structure
 
@@ -22,6 +23,7 @@ claudesupply.com/dinos/          → Dinos restaurant
 claudesupply.com/pingsbistro/    → Ping's Bistro (Hunan)
 claudesupply.com/chickengs/      → Chicken G's (halal fried chicken)
 claudesupply.com/allpurposepainting/ → All Purpose Painting (painting contractor)
+claudesupply.com/ejpainting/         → EJ Painting (painting services, Menlo Park)
 ```
 
 ### File Structure
@@ -36,7 +38,8 @@ sites/
 │   ├── dinos/                  # Dinos client site
 │   ├── pingsbistro/            # Ping's Bistro (standalone)
 │   ├── chickengs/              # Chicken G's (standalone)
-│   └── allpurposepainting/     # All Purpose Painting (standalone)
+│   ├── allpurposepainting/     # All Purpose Painting (standalone)
+│   └── ejpainting/             # EJ Painting (standalone)
 ├── components/
 │   ├── keekuzcom/              # Keekuz components
 │   └── dinos/                  # Dinos components
