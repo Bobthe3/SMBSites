@@ -2,12 +2,12 @@
 
 import { useState, FormEvent } from 'react'
 
-export default function EJPaintingPage() {
+export default function JPPaintingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    alert('Thank you for your request! Edvin will contact you within 24 hours.')
+    alert('Thank you for your request! JP Painting will contact you soon.')
     ;(e.target as HTMLFormElement).reset()
   }
 
@@ -756,13 +756,13 @@ export default function EJPaintingPage() {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-inner">
-          <a href="#" className="logo">EJ Painting</a>
+          <a href="#" className="logo">JP Painting</a>
           <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
             <a href="#services" onClick={(e) => scrollToSection(e, '#services')}>Services</a>
             <a href="#gallery" onClick={(e) => scrollToSection(e, '#gallery')}>Gallery</a>
             <a href="#reviews" onClick={(e) => scrollToSection(e, '#reviews')}>Reviews</a>
             <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact</a>
-            <a href="tel:6502499264" className="btn">(650) 249-9264</a>
+            <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="btn">Request Pricing</a>
           </div>
           <button className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
             <span></span>
@@ -789,10 +789,10 @@ export default function EJPaintingPage() {
         <div className="hero-inner">
           <div className="hero-content">
             <h1>Professional Painting for <span>Bay Area Homes</span></h1>
-            <p className="hero-text">Family owned painting company serving Menlo Park and the entire Bay Area. Interior, exterior, cabinets, drywall &mdash; we do it all with care.</p>
+            <p className="hero-text">Professional painting company serving Redwood City and the entire Bay Area. Interior, exterior, cabinets, drywall &mdash; expert craftsmanship for every project.</p>
             <div className="hero-ctas">
-              <a href="#contact" className="btn" onClick={(e) => scrollToSection(e, '#contact')}>Get Free Estimate</a>
-              <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
+              <a href="#contact" className="btn" onClick={(e) => scrollToSection(e, '#contact')}>Request Pricing & Availability</a>
+              <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
             </div>
             <div className="hero-rating">
               <div className="hero-rating-stars">
@@ -802,7 +802,7 @@ export default function EJPaintingPage() {
                 <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               </div>
-              <div className="hero-rating-text">4.9 <span>on Yelp (56 reviews)</span></div>
+              <div className="hero-rating-text">Highly Rated <span>on Yelp</span></div>
             </div>
           </div>
           <div className="hero-image">
@@ -869,7 +869,7 @@ export default function EJPaintingPage() {
           </div>
         </div>
         <div className="gallery-cta">
-          <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer" className="btn btn-outline">See All 134 Photos on Yelp</a>
+          <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer" className="btn btn-outline">View Photos on Yelp</a>
         </div>
       </section>
 
@@ -888,7 +888,7 @@ export default function EJPaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <p className="review-text">&ldquo;Edvin did a great job staining a new wood door to match the rest of the house. Very responsive and got the job done quickly with attention to detail.&rdquo;</p>
+            <p className="review-text">&ldquo;JP did a great job staining a new wood door to match the rest of the house. Very responsive and got the job done quickly with attention to detail.&rdquo;</p>
             <div className="review-author">Matt M. <span>&bull; Oakland</span></div>
           </div>
           <div className="review-card">
@@ -911,7 +911,7 @@ export default function EJPaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <p className="review-text">&ldquo;Great job and a pleasure to work with. Prompt communication, fair quote, and high quality work. Paid attention to the details.&rdquo;</p>
-            <div className="review-author">John M. <span>&bull; Menlo Park</span></div>
+            <div className="review-author">John M. <span>&bull; Redwood City</span></div>
           </div>
           <div className="review-card">
             <div className="review-stars">
@@ -922,11 +922,11 @@ export default function EJPaintingPage() {
               <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <p className="review-text">&ldquo;Excellent work! Meticulous prep, beautiful result. They even replaced hardware and came on time every morning.&rdquo;</p>
-            <div className="review-author">Linda S. <span>&bull; Menlo Park</span></div>
+            <div className="review-author">Linda S. <span>&bull; Redwood City</span></div>
           </div>
         </div>
         <div className="reviews-cta">
-          <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">Read All 56 Reviews on Yelp</a>
+          <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View All Reviews on Yelp</a>
         </div>
       </section>
 
@@ -936,11 +936,11 @@ export default function EJPaintingPage() {
           <h2>Ready to Get Started?</h2>
           <p>Free estimates, fast response, and results guaranteed. Family owned, verified license, serving all Bay Area cities.</p>
           <div className="cta-buttons">
-            <a href="#contact" className="btn" onClick={(e) => scrollToSection(e, '#contact')}>Request Free Estimate</a>
-            <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
+            <a href="#contact" className="btn" onClick={(e) => scrollToSection(e, '#contact')}>Request Request Quote</a>
+            <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
           </div>
           <div className="cta-phone">
-            <a href="tel:6502499264">(650) 249-9264</a>
+            <a href="tel:6502499264">Request Pricing</a>
           </div>
         </div>
       </section>
@@ -949,16 +949,16 @@ export default function EJPaintingPage() {
       <section className="contact" id="contact">
         <div className="contact-inner">
           <div className="contact-info">
-            <h2>Get Your Free Estimate</h2>
-            <p>Fill out the form and Edvin will get back to you quickly.</p>
+            <h2>Get Your Request Quote</h2>
+            <p>Fill out the form and JP will get back to you quickly.</p>
             <div className="contact-details">
               <div className="contact-item">
                 <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <a href="tel:6502499264">(650) 249-9264</a>
+                <a href="tel:6502499264">Request Pricing</a>
               </div>
               <div className="contact-item">
                 <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Menlo Park &amp; All Bay Area</span>
+                <span>Redwood City &amp; All Bay Area</span>
               </div>
               <div className="contact-item">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -969,7 +969,7 @@ export default function EJPaintingPage() {
                 <span>Credit cards accepted</span>
               </div>
             </div>
-            <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
+            <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer" className="btn btn-yelp">View on Yelp</a>
           </div>
           <div className="contact-form">
             <h3>Request a Quote</h3>
@@ -1019,7 +1019,7 @@ export default function EJPaintingPage() {
         <div className="footer-inner">
           <div className="footer-main">
             <div className="footer-brand">
-              <a href="#" className="logo">EJ Painting</a>
+              <a href="#" className="logo">JP Painting</a>
               <p>Professional painting services for homes and businesses. Family owned, serving all Bay Area cities.</p>
             </div>
             <div className="footer-links">
@@ -1035,7 +1035,7 @@ export default function EJPaintingPage() {
               <div className="footer-col">
                 <h4>Areas</h4>
                 <ul>
-                  <li><a href="#">Menlo Park</a></li>
+                  <li><a href="#">Redwood City</a></li>
                   <li><a href="#">Palo Alto</a></li>
                   <li><a href="#">Redwood City</a></li>
                   <li><a href="#">Bay Area</a></li>
@@ -1044,8 +1044,8 @@ export default function EJPaintingPage() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>&copy; 2025 EJ Painting Inc.</span>
-            <a href="https://www.yelp.com/biz/ej-painting-menlo-park-11" target="_blank" rel="noopener noreferrer">View on Yelp</a>
+            <span>&copy; 2025 JP Painting Inc.</span>
+            <a href="https://www.yelp.com/biz/jp-painting-redwood-city" target="_blank" rel="noopener noreferrer">View on Yelp</a>
           </div>
         </div>
       </footer>
