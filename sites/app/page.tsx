@@ -527,54 +527,40 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Right Column - Calendly Embed */}
+            {/* Right Column - Email CTA */}
             <div
-              className="bg-white border overflow-hidden"
-              style={{ borderColor: 'var(--border)', minHeight: '500px' }}
+              className="bg-white border overflow-hidden flex flex-col items-center justify-center p-12 text-center"
+              style={{ borderColor: 'var(--border)', minHeight: '400px' }}
             >
-              {/* TODO: Replace with actual Calendly embed */}
-              {/*
-                To add your Calendly:
-                1. Go to Calendly > Share > Add to website > Inline embed
-                2. Copy the embed code
-                3. Replace the placeholder below with:
-                   <iframe
-                     src="https://calendly.com/YOUR-USERNAME/YOUR-EVENT"
-                     width="100%"
-                     height="100%"
-                     frameBorder="0"
-                   />
-              */}
               <div
-                className="w-full h-full flex flex-col items-center justify-center p-8 text-center"
-                style={{ minHeight: '500px', backgroundColor: '#FAFAFA' }}
+                className="w-20 h-20 flex items-center justify-center mb-8"
+                style={{ backgroundColor: 'var(--burgundy)' }}
               >
-                <div
-                  className="w-16 h-16 flex items-center justify-center mb-6 rounded-full"
-                  style={{ backgroundColor: 'var(--burgundy)', opacity: 0.1 }}
-                >
-                  <div
-                    className="w-12 h-12 flex items-center justify-center rounded-full"
-                    style={{ backgroundColor: 'var(--burgundy)' }}
-                  >
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                </div>
-                <p
-                  className="font-serif text-xl font-medium mb-2"
-                  style={{ color: 'var(--charcoal)' }}
-                >
-                  Calendly Booking
-                </p>
-                <p
-                  className="font-sans text-sm"
-                  style={{ color: 'var(--gray-light)' }}
-                >
-                  Scheduling widget will appear here
-                </p>
+                <Mail className="w-10 h-10 text-white" />
               </div>
+              <p
+                className="font-serif text-2xl font-medium mb-4"
+                style={{ color: 'var(--charcoal)' }}
+              >
+                Ready to Get Started?
+              </p>
+              <p
+                className="font-sans text-base mb-8 max-w-sm"
+                style={{ color: 'var(--gray-warm)' }}
+              >
+                Send us an email and we&apos;ll get back to you within 24 hours to schedule your free consultation.
+              </p>
+              <a
+                href="mailto:claudesupplyds@gmail.com"
+                className="inline-flex items-center gap-3 font-sans text-sm font-medium tracking-wide px-8 py-4 transition-all duration-300 hover:opacity-90"
+                style={{
+                  backgroundColor: 'var(--burgundy)',
+                  color: 'white',
+                }}
+              >
+                Email Us
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
